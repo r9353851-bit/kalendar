@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#10111e" />
+  <title>365 Letters — для тебя ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="stars" aria-hidden="true"></div>
+  <main class="app">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="365 Letters">
+        <span class="brand-mark">♡</span>
+        <span>365 <i>Letters</i></span>
+      </a>
+      <div class="top-note"><span class="pulse"></span> маленький мир для двоих</div>
+    </header>
+
+    <section class="hero">
+      <p class="eyebrow">ОДНО ПИСЬМО. КАЖДЫЙ ДЕНЬ.</p>
+      <h1>Для тебя,<br><em>с любовью.</em></h1>
+      <p class="intro">365 маленьких напоминаний о том, как много ты значишь.<br class="desktop-only"> Не спеши — пусть у каждого письма будет свой день.</p>
+
+      <div class="progress-wrap">
+        <div class="progress-copy"><span id="progressLabel">Путь только начинается</span><strong id="progressCount">0 / 365</strong></div>
+        <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+      </div>
+    </section>
+
+    <section class="letter-area" aria-live="polite">
+      <div class="date-chip"><span class="calendar-icon">♡</span><span id="todayLabel">Письмо дня</span></div>
+      <button class="envelope-button" id="envelopeButton" aria-label="Открыть сегодняшнее письмо">
+        <div class="envelope-scene">
+          <div class="envelope-glow"></div>
+          <div class="letter-paper">
+            <span class="paper-heart">♡</span>
+            <span class="paper-lines"></span>
+            <span class="paper-lines short"></span>
+          </div>
+          <div class="envelope-back"></div>
+          <div class="envelope-front-left"></div>
+          <div class="envelope-front-right"></div>
+          <div class="envelope-front-bottom"></div>
+          <div class="envelope-flap"></div>
+          <div class="wax-seal">♡</div>
+          <div class="sparkle s1">✦</div><div class="sparkle s2">✧</div><div class="sparkle s3">✦</div>
+        </div>
+      </button>
+      <p class="tap-hint" id="tapHint">Нажми на конверт, чтобы открыть письмо</p>
+      <button class="primary-button" id="openButton">Открыть письмо <span>↗</span></button>
+      <p class="small-note" id="lockNote">Следующее письмо будет ждать тебя завтра. ❤️</p>
+    </section>
+
+    <section class="memory-card">
+      <div class="memory-icon">✧</div>
+      <div>
+        <p class="memory-title">Маленькая просьба</p>
+        <p class="memory-text">Открывай письмо не спеша. Иногда несколько искренних слов могут сделать день теплее.</p>
+      </div>
+    </section>
+
+    <footer><span>Сделано с любовью</span><span>♡</span><span>365 дней — 365 поводов улыбнуться</span></footer>
+  </main>
+
+  <div class="modal-backdrop" id="letterModal" role="dialog" aria-modal="true" aria-labelledby="letterTitle" hidden>
+    <article class="letter-modal">
+      <button class="close-button" id="closeModal" aria-label="Закрыть письмо">×</button>
+      <div class="modal-decoration">✦ &nbsp; ♡ &nbsp; ✦</div>
+      <p class="modal-day" id="modalDay">ПИСЬМО № 1</p>
+      <h2 id="letterTitle">Для тебя</h2>
+      <div class="letter-content" id="letterContent"></div>
+      <p class="letter-signature">Всегда с теплом, <span>твой человек ♡</span></p>
+      <button class="primary-button modal-done" id="doneButton">Сохранить в сердце ♡</button>
+    </article>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
